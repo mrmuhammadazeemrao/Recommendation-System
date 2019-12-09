@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Cinema Ghar
+
+  </title>
+  <link rel="icon" href="static/img/logo.png" type="image/x-icon" />
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="static/CustmCss.CSS">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="static/CSS\w3.css">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="static/device-mockups/device-mockups.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/new-age.min.css" rel="stylesheet">
+  <style>
+    .container69 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.top-right {
+  position: absolute;
+  top: 115px;
+  right: 10px;
+}
+.centered69 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"> <div style="font-size:30px;font-family:French Script MT; "> <b>C</b>inema <b>G</b>har</div>  </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Recommendation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead" style="padding-top: 80px">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5" style="margin-top: -250px ">Search your Movie</h1>
+            
+            <div class="s130" style="margin-top:-30px ">
+      <form  action="http://localhost:5000/search" method="POST" >
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+              </svg>
+            </div>
+            <input name="movieName" id="search" type="text" placeholder="What are you looking for?" />
+          </div>
+          <div class="input-field second-wrap">
+            <button class="btn-search"  type="submit">SEARCH</button>
+          </div>
+        </div>
+        <span class="info">Movie name here..</span>
+      </form>
+    </div>
+
+        <div style="">    {% block SMName%} {% endblock %} </div>
+
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 my-auto">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <div class="container69">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="static/img/demo-screen-1.jpg" alt="" class="img-fluid" alt="">
+                    <div class="centered69">
+                      {% block SMMobile%} 
+
+                        {{ t }}
+                      {% endblock %}
+                    </div>
+  
+  
+                  </div>
+                </div>
+                <div class="button">
+                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="download bg-primary text-center" id="download">
+    
+      
+        <div class="container">
+           <div class="row" style="margin-bottom: 50px">
+        <div class="col-md-8 mx-auto">
+          <h2 class="section-heading">Recommended Movies For You!!!</h2>
+          
+          
+        </div>
+      </div>
+
+
+                    <div class="row ">
+
+
+                                    <div class="col-sm-3 ">
+                                      <div class="container69">
+                                      <img src="{{variable1}}" alt="static/img/Movie.png"  width="350" height="250" class="img-thumbnail  "/> 
+                                        <div class="top-right">
+                                                {% block RM1%} {% endblock %}
+
+                                                      </div>
+                                        </div>
+                                          </div>
+
+
+
+
+
+                                    <div class="col-sm-3">
+                                 <div class="container69">
+                                      <img src="{{variable2}}" alt="static/img/Movie.png" width="350" height="250" class="img-thumbnail  "/> 
+                                        <div class="top-right">
+                                                {% block RM2 %} {% endblock %}
+
+                                                      </div>
+                                        </div>
+
+                                    </div>
+                                                  <div class="col-sm-3">
+                                     <div class="container69">
+                                      <img src="{{variable3}}" alt="static/img/Movie.png"  width="350" height="250" class="img-thumbnail  "/> 
+                                        <div class="top-right">
+                                                {% block RM3%} {% endblock %}
+
+                                                      </div>
+                                        </div>
+
+                                        </div>
+                                          <div class="col-sm-3">
+                                       <div class="container69">
+                                      <img src="{{variable4}}" alt="static/img/Movie.png"  width="350" height="250" class="img-thumbnail  "/> 
+                                        <div class="top-right">
+                                                {% block RM4%}
+                                                {% endblock %}
+
+                                                      </div>
+                                        </div>
+
+                                          </div>
+
+
+                          </div>
+    
+    </div>
+  </section>
+
+  <section style="margin-top: -150px" class="features" id="features">
+
+    <div class="w3-row-padding w3-center w3-padding-64" >
+    <h2>OUR TEAM </h2>
+    <p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li  style="background: #dc2430;">
+          <p class="w3-xlarge">GIT HUB Info</p>
+        </li>
+        <li class="w3-padding-16"><img src="static/img/p0.jpeg" width="200px" height="200px" style="border-radius: 50%;"></li>
+        <li class="w3-padding-16"><b>Muhammad Ramzan</b> </li>
+        <li class="w3-padding-16"><b>m.ramzan4120@gmail.com</b> </li>
+        
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 4</h2>
+          <span class="w3-opacity">months on GIT HUB</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> <a href="https://github.com/MuhammadRamzan1122/MovieName" style="color:white"> Sign Up </a></button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li  style="background: #fdcc52;">
+          <p class="w3-xlarge">GIT HUB Info</p>
+        </li>
+        <li class="w3-padding-16"><img src="static/img/p1.JPG" width="200px" height="200px" style="border-radius: 50%;"></li>
+        <li class="w3-padding-16"><b> Muhammad ur Rehman</b></li>
+        <li class="w3-padding-16"><b> Rehman6491@gmail.com</b></li>
+        
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 15</h2>
+          <span class="w3-opacity">Months On GIT HUB</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i><a style="color:white" href="https://github.com/RehmanBunny"> Sign Up</a></button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li style="background: #7b4397;">
+          <p class="w3-xlarge">GIT HUB Info</p>
+        </li>
+        <li class="w3-padding-16"><img src="static/img/p2.jpg" width="200px" height="200px" style="border-radius: 50%;"></li>
+        <li class="w3-padding-16"><b>Muhammad Azeem Rao</b> </li>
+        <li class="w3-padding-16"><b>mrmuhammadazeemrao@gmail.com</b> </li>
+       
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity">months on Git HUB</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+  </section>
+
+
+
+
+
+
+
+
+  <section style="margin-top: -150px" class="contact bg-primary" id="contact">
+    
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Developed By Bunny`s CO. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="static/js/new-age.min.js"></script>
+
+</body>
+
+</html>
