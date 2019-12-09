@@ -52,11 +52,14 @@ def KNN(standardMovie):
                 for genre in movie['genres']:
                     for standardGenre in standardMovie['genres']:
                         
-                        if genre!=standardGenre:
+                        if genre not in standardMovie['genres']:
                     
                             euclideanDistance+=1
                         
-            
+                for standardGenre in standardMovie['genres']:
+                    for genre in movie['genres']:
+                        if standardGenre not in movie['genres']:
+                            euclideanDistance+=1
                
                 
                 #euclideanDistance = math.sqrt(euclideanDistance)
